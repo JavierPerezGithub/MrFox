@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/relLogin"
+    android:layout_height="match_parent"
+    tools:context="com.example.javier.mrfox.MyLogin">
+    <ImageView
+        android:id="@+id/imLogin"
+        style="@style/fondoFox"
+        android:src="@drawable/foxlogin" />
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/titulo"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="70sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:backgroundTint="@color/fondoLayout"
+        android:id="@+id/linearLayout"
+        android:layout_marginLeft="170dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvLogin"
+
+        android:alpha="1"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/idUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/idPasswd"
+            android:ems="10"
+            android:hint="@string/user"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/idPasswd3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/idBTN"
+            android:ems="10"
+            android:hint="@string/pass"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/idBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/linearLayout"
+        android:layout_below="@+id/linearLayout"
+        android:background="@drawable/button"
+        android:onClick="onClick"
+        android:text="@string/sign" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignStart="@+id/idBTN"
+        android:layout_alignTop="@+id/tvLogin"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/logofox" />
+
+</RelativeLayout>
